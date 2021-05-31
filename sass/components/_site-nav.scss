@@ -1,0 +1,58 @@
+/*---НАВИГАЦИЯ САЙТА---*/
+.site-nav {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-left: 93px;
+  padding: 0;
+}
+
+.site-nav__item:not(:first-child) {
+  margin-left: 50px;
+}
+
+/*увеличение активной зоны для элементов меню*/
+.site-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--primary-text-color);
+
+  transition: color 250ms $timing-fn;
+
+  /*подсветка активной страницы*/
+  &--current {
+    color: $accent-color;
+  }
+
+  /*нижнее подчеркивание активной страницы в хедере*/
+  &--current {
+    position: relative;
+  }
+
+  &--current::after {
+    position: absolute;
+    display: block;
+
+    bottom: -1px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+
+    background-color: $accent-color;
+  }
+
+  /*изменение цвета элемента меню при наведении*/
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  &:focus {
+    color: $accent-color;
+    outline: none;
+  }
+}

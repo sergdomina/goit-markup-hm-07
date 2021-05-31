@@ -1,0 +1,29 @@
+/*---ШАПКА---*/
+.page-header {
+  position: sticky;
+
+  width: 100%;
+  top: -1px;
+  left: 0;
+  z-index: 100;
+
+  background-color: $white-сolor;
+  border: 1px solid $header-border-color;
+
+  letter-spacing: 0.02em;
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 500;
+}
+
+.page-header__nav {
+  display: flex;
+  align-items: center;
+}
+
+/*позиционирование элементов шапки*/
+.page-header-flex {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+}

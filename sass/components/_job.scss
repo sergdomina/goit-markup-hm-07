@@ -1,0 +1,39 @@
+/*---ЧЕМ ЗАНИМАЕМСЯ---*/
+
+.job__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 0;
+  margin: 0;
+  margin-top: calc(-1 * #{$card-set-gap});
+  margin-left: calc(-1 * #{$card-set-gap});
+}
+
+/*сетка*/
+.job__item {
+  flex-basis: calc(100% / 3 - #{$card-set-gap});
+  margin-top: #{$card-set-gap};
+  margin-left: #{$card-set-gap};
+
+  position: relative;
+}
+
+.job__subtitle {
+  position: absolute;
+
+  bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+
+  color: $white-сolor;
+  background-color: $background-features-title;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-align: center;
+}

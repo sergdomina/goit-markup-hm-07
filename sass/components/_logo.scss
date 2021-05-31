@@ -1,0 +1,37 @@
+/*ЛОГО*/
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+
+  color: $logo-color;
+
+  &--color {
+    color: $accent-color;
+}
+
+/*тень при фокусе*/
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $accent-color;
+    border-radius: 4px;
+  }
+}
+
+/*лого в футере*/
+.footer__logo {
+  width: fit-content;
+  display: block;
+  margin-bottom: 20px;
+
+  color: $white-сolor;
+
+  /*тень при фокусе лого в футере*/
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px $accent-color;
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,195 @@
+/*--ФОРМА В МОДАЛЬНОМ ОКНЕ--*/
+.form {
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+
+  color: $text-color;
+}
+
+/*заголовок*/
+.form__title {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $primary-text-color;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.form__label {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.form__wrapper {
+  position: relative;
+}
+
+.form__input {
+  margin: 0;
+  padding: 0;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 12px;
+  padding-left: 42px;
+  width: 100%;
+
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  transition: color 250ms $timing-fn;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+    caret-color: $accent-color;
+  }
+}
+
+/*иконки полей модального окна*/
+.form__icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+
+  width: 18px;
+  height: 18px;
+
+  color: $primary-text-color;
+  fill: currentColor;
+
+  transform: translateY(-50%);
+  transition: color 250ms $timing-fn;
+
+  /*изменение цвета иконки при фокусе input*/
+  .form__input:focus ~& {
+    color: $accent-color;
+  }
+}
+
+/*поле комментария*/
+.form__comment {
+  padding: 12px 16px;
+
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  resize: none;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+    caret-color: $accent-color;
+  }
+}
+
+/*соглашение на рассылку*/
+.policy {
+  display: flex;
+  justify-content: center;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+}
+
+.policy__field {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+/*скрывается checkbox браузера*/
+.policy__input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*иконка чекбокса*/
+.policy__icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  border: 2px solid $primary-text-color;
+  border-radius: 2px;
+
+  /*скрываем иконку чекбокса*/
+  &--display {
+    display: none;
+  }
+
+  /*при выборе checkbox появляется иконка*/
+  .policy__input:checked + & use {
+    display: inline-block;
+  }
+
+  /*при выборе checkbox исчезает бордер*/
+  .policy__input:checked + & {
+    border: none;
+  } 
+}
+
+.policy__link {
+  margin-left: 4px;
+  text-decoration: underline;
+
+  color: $accent-color;
+}
+
+/*кнопка формы*/
+.form__button {
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
+

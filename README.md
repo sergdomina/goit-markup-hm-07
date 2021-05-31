@@ -1,2 +1,2 @@
-# goit-markup-hm-07
- 
+# goit-markup-hw-07
+репозиторий для ДЗ №7

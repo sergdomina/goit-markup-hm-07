@@ -1,0 +1,56 @@
+/*список ссылок на социальные сети*/
+.social-list {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+
+  color: $icon-color;
+}
+
+/*ссылка на соцсеть*/
+.social-list__link {
+  display: block;
+
+  padding: 0;
+  margin: 0;
+
+  color: $icon-color;
+
+  line-height: 0;
+  border-radius: 50%;
+
+  transition: background-color 250ms $timing-fn,
+    color 250ms $timing-fn;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white-сolor;
+  }
+
+  /*тень при фокусе*/
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px $portfolio-button-background;
+    border-radius: 50%;
+  }
+
+  /*другой фон ссылки на соцсеть в футере*/
+  &--color {
+  background-color: $footer-icon-background;
+  color: $white-сolor;
+  }
+} 
+
+
+
+/*иконки соцсетей*/
+.social-list__icon {
+  padding: 12px;
+  width: 44px;
+  height: 44px;
+
+  fill: currentColor;
+}
